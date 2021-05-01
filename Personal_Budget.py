@@ -114,6 +114,9 @@ def valid_date():
 		except ValueError:
 			print("Please, Enter the date with this format YYYY-M-D")
 			continue
+		if date.year	> datetime.today().year:
+			print("Please, Enter the right year")
+			continue
 		else:
 			break
 	return answer
@@ -157,8 +160,10 @@ if (int(n) == 2 ):
 		try:
 			t = int(input())
 		except ValueError:
-			print("please, choose the prefered number")
+			print("please, Enter the prefered number")
 			continue
+		if t < 0:
+			print("Please, Enter postive number")
 		else:
 			break
 	current_budget(t)
@@ -176,6 +181,18 @@ if (int(n) == 2 ):
 
 if(int(n) == 3):
 	print("GoodBye")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
